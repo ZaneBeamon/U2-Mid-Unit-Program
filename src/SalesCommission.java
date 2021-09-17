@@ -18,9 +18,43 @@ Total Earnings: $1184.38
 
  */
 
+import javax.swing.*;
+import java.text.DecimalFormat;
+
+
 public class SalesCommission {
 
     public static void main(String[] args) {
+        double Hours = getInput("how many hours");
+        double rate = getInput("what is the rate");
+        double Commission = getInput("what the Percent of sale:");
+        double Hourlypay = getInput("what is ")
+
+        double payRate = payRate(Hours, rate,);
+        double Commission = Commission( Hourlypay, Commission);
+
+
+
+
+    }
+    public static int getInput(String message){
+        return Integer.parseInt(JOptionPane.showInputDialog(message));
+    }
+    public static double payRate(double Hours, double rate, double Sale, double Total){
+       return Hours * rate + Sale * Total / 100.00;
+    }
+    public static double Commission(double HourlyPay, double Commission){
+        return HourlyPay + Commission;
+
+    }
+    public static void Output(double payRate, double Commssion){
+        DecimalFormat round = new DecimalFormat("#.##");
+
+        JOptionPane.showMessageDialog(null, "Hourly Rate:" + round.format(payRate));
+        JOptionPane.showMessageDialog(null, "Hours Worked: " + round.format(payRate));
+        JOptionPane.showMessageDialog(null, "Sale Commission: " + round.format(Commssion));
+        JOptionPane.showMessageDialog(null, "Total Sales: " + round.format(Commssion));
+
 
     }
 
